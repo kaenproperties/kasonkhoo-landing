@@ -1,0 +1,36 @@
+
+.qodef-instagram-list-holder {
+	@include qodefRelativeHolderLayout();
+	clear: both;
+
+	@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+		&.qodef-grid-list.qodef-five-columns .qodef-item-space {
+			width: 20%;
+
+			&:nth-child(4n+1) {
+				clear: none;
+			}
+
+			&:nth-child(5n+1) {
+				clear: both;
+			}
+		}
+	}
+	
+	&:not(.qodef-il-one-column) {
+		
+		.qodef-il-item {
+			float: left;
+		}
+	}
+	
+	.qodef-instagram-carousel {
+		margin: 0 !important;
+	}
+	
+	.qodef-il-item {
+		@include qodefRelativeHolderLayout();
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
