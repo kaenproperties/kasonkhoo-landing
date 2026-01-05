@@ -1,679 +1,531 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-Hans">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kason Khoo｜房地产投资顾问｜选房・装修・出租・管理｜</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="新Project建议/二手买卖/出租服务/Loan Planning">
-    <meta name="author" content="Kason Khoo">
+  <meta name="description" content="Kason Khoo｜房地产投资顾问，专注选房、装修、出租、管理。我不卖项目，我负责让你的房子买得对、租得出、管得稳。" />
+  <meta name="robots" content="index,follow" />
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="Kason Khoo 房地产投资顾问" /> <!-- website name -->
-	<meta property="og:site" content="www.kasonkhoo.com" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="images\Meta Photo.jpg" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#F7FAFF",
+            ink: "#0B1220",
+            sub: "#52607A",
+            line: "#E6ECF5",
+            navy: "#0B2A5B",
+            navy2: "#123A7A",
+            sky: "#EAF2FF"
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- Webpage Title -->
-    <title>Kason Khoo 房地产投资顾问</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    .shadow-soft { box-shadow: 0 18px 45px rgba(11,18,32,.08); }
+    .shadow-card { box-shadow: 0 12px 28px rgba(11,18,32,.08); }
+    .photo-crisp{
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      filter: contrast(1.05) saturate(1.03);
+    }
+    .focus-ring:focus { outline: none; box-shadow: 0 0 0 4px rgba(11,42,91,.15); }
 
-    <!-- Styles -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    /* pill buttons (logo + text) */
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border: 1px solid #E6ECF5;
+      background:#fff;
+      border-radius:9999px;
+      padding:10px 14px;
+      transition: all .15s ease;
+      text-decoration:none;
+      user-select:none;
+      color:#0B1220;
+      font-weight:600;
+      font-size:14px;
+      line-height:1;
+    }
+    .pill:hover{ background:#EAF2FF; }
+    .pill svg{ width:18px; height:18px; }
+    .pill-primary{
+      background:#0B2A5B;
+      border-color:#0B2A5B;
+      color:#fff;
+    }
+    .pill-primary:hover{ background:#123A7A; border-color:#123A7A; }
+    .pill-primary svg path{ fill:#fff !important; }
 
-	<!-- Favicon  -->
-    <link rel="icon" href="images\Kason logo Gold black bg.png">
-	<!-- Facebook Pixel Code -->
-	<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2968952740089331');
-  fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=2968952740089331&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHW441W26Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CHW441W26Q');
-</script>
+    .dot{ width:8px; height:8px; border-radius:9999px; background:#0B2A5B; display:inline-block; }
+  </style>
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
+<body class="bg-bg text-ink">
 
-            <!-- Image Logo -->
-            <a class="images/Kason logo Gold black bg.png" href="index.html"><img src="images/Kason logo Gold black bg.png" width="100" height="100" alt="alternative"></a>
+<script>
+  const WA_NUMBER = "60123828967";
+  const WA_MESSAGE = encodeURIComponent(
+    "Hi Kason，我从你的网站来。\n想聊：选房 / 装修 / 出租 / 管理。\n预算 / 区域 / 目标：____"
+  );
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
+  const LINKS = {
+    whatsapp: () => `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`,
+    instagram: "https://www.instagram.com/kasonkhoo/",
+    tiktok: "https://www.tiktok.com/@kaenproperties_official?_r=1&_t=ZS-92i3yxv6OoP",
+    xhs: "https://xhslink.com/m/4HRKfUToTKR",
+    facebook: "https://www.facebook.com/kason.khoo"
+  };
 
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  // photo path (you placed public/kason.jpg)
+  const PHOTO_CANDIDATES = ["/kason.jpg", "/public/kason.jpg", "public/kason.jpg"];
+</script>
 
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">关于我</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">我的服务</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="Project.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="Loan.html">Loan Calculator</a>
-                    </li>
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-                    <li class="nav-item">
-                      <a class="nav-link page-scroll" href="https://www.tiktok.com/@kasonkhoo?lang=en&is_copy_url=1&is_from_webapp=v1" target="_blank">学习房地产(Tiktok)</a>
-                  </li>
-<!--                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="Project.html">Project Details</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                        </div>
-                    </li>
--->                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">联系我</a>
-                    </li>
-                </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="https://www.facebook.com/KasonKhooPropertyConsultant">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://kasonkhoocom.wasap.my">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-whatsapp fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+    <!-- left: name only -->
+    <a href="#top" class="block">
+      <div class="font-semibold tracking-wide">Kason Khoo</div>
+      <div class="text-xs text-sub">房地产投资顾问 · </div>
+    </a>
 
+    <!-- right: pill buttons with logo + text -->
+    <div class="hidden md:flex items-center gap-2">
+      <a id="ttTop" class="pill focus-ring" title="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#111827" d="M21 8.2c-1.8 0-3.5-.6-4.9-1.6v7.6a6.4 6.4 0 11-6.4-6.4h.6v3.2h-.6a3.2 3.2 0 103.2 3.2V2h3.1c.4 2.2 2.3 3.8 5 4v2.2z"/>
+        </svg>
+        TikTok
+      </a>
 
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h1 class="h1-large" style="color:white;">我是Kason Khoo房地产投资顾问以及团队领导</h1>
-                        <a class="btn-solid-lg page-scroll" href="#about">关于我</a>
-                        <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>联系我</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+      <a id="xhsTop" class="pill focus-ring" title="小红书">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="4" fill="#FF2442"/>
+          <path d="M7.2 12.2h9.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M8.3 9.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+          <path d="M8.3 15.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+        </svg>
+        小红书
+      </a>
 
+      <a id="igTop" class="pill focus-ring" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#E4405F" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.3-.6a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+        </svg>
+        Instagram
+      </a>
 
-    <!-- About-->
-    <div id="about" class="basic-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container first">
-                        <h1>我是Kason Khoo</h1>
-                        <p><h4>3个房地产必须要有的条件</h4></p>
-                          <p><h4>★租到出去</h4></p>
-                          <p><h4>★住到舒服</h4></p>
-                          <p><h4>★升值空间</h4></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7">
-                    <div class="text-container second">
-                      <h4>在3年内 利用房地产筛选法则</h4>
-                      <h7>帮助超过300位马来西亚房地产投资者找到精准项目</h7><br>
-                        <br>    <br>
-                        <h4>房地产投资是可以利用最低的成本来得到最大的利润</h4>
-                        <h7>你不需要500千Cash来投资房地产，相比一些投资工具如Unit Trust，
-                          你要投资500千的Unit Trust的话，你必须拥有500千的Cash!
-                          学会正确的房地产投资，才能做到小刀锯大树！</h7>
-                <!--        <p>Working happily on my own web projects</p>
-                        <div class="time">2018 - 2019</div>
-                        <h6>Lead Web Developer</h6>
-                        <p>Beautiful project for a major digital agency</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-          <!--      <div class="col-lg-4">
-                    <div class="text-container third">
-                        <div class="time">2017 - 2018</div>
-                        <h6>Senior Web Designer</h6>
-                        <p>Inhouse web designer for ecommerce firm</p>
-                        <div class="time">2016 - 2017</div>
-                        <h6>Junior Web Designer</h6>
-                        <p>Junior web designer for small web agency</p> -->
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    <!-- end of about -->
+      <a id="fbTop" class="pill focus-ring" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#1877F2" d="M12 2a10 10 0 00-1.7 19.9v-7H7.8V12h2.5V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.3h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0012 2z"/>
+        </svg>
+        Facebook
+      </a>
 
+      <a id="waTop" class="pill pill-primary focus-ring" title="WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+          <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
 
-    <!-- Services -->
-    <div id="services" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">我的服务</h2>
-                    <br>
-                <!--    <p class="p-heading">Web design and development have been my bread and butter for more than 5 years. During that time I've discovered that I can help startups and companies with the following services</p>  -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-box">
-                        <center>  <img src="images/Condominium.png" width="84" height="84" alt="alternative"></a></center>
-                        <center><h5>新项目建议<br>(New Projects Advices)</h5>
-                        <p>依据你的<br>Investment Objective, Budget & Location<br>来筛选出最精准的项目<br></p>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-box">
-                        <center>  <img src="images/2nd.png" width="84" height="84" alt="alternative"></a>
-                        <h5>二手买卖<br>(Second Hand Buy&Sell)</h5>
-                        <p>会使用平台的优势<br>在最短的时间出售你的房地产<br>再配合各种管道，把成本拉倒最低！</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-box">
-                        <center>  <img src="images/Rent.png" width="84" height="84" alt="alternative"></a>
-                        <h5>出租服务<br>(Renting Service)</h5>
-                        <p>依据你的房地产地点和间隔来做规划<br>会以长租或AirBnB的方式出租出去<br>把租金回酬最大化！</p></center>
-                      </div> <!-- end of text-box -->
-                  </div> <!-- end of col -->
-                  <div class="col-lg-6">
-                      <div class="text-box">
-                          <center>  <img src="images/Loan.png" width="84" height="84" alt="alternative"></a>
-                          <h5>贷款规划<br>(Loan Planning)</h5>
-                          <p>投资房地产就要学会使用杠杆原理<br>同时也要把Profile弄到漂亮<br>才能获得更低利息和更多贷款</p></center>
-                    </div> <!-- end of text-box -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of services -->
+    <!-- mobile: only WhatsApp -->
+    <div class="md:hidden">
+      <a id="waTopM" class="pill pill-primary focus-ring" title="WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+          <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
 
+  </div>
+</header>
 
-    <!-- Details -->
-	<div class="split">
-		<div class="area-1">
-		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
+<!-- ================= HERO ================= -->
+<section id="top" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-40 left-1/2 w-[640px] h-[640px] -translate-x-1/2 bg-sky rounded-full blur-3xl opacity-80"></div>
+    <div class="absolute -bottom-56 right-[-120px] w-[520px] h-[520px] bg-sky rounded-full blur-3xl opacity-60"></div>
+  </div>
 
-                        <!-- Text Container -->
-                    <!--    <div class="text-container"> -->
-                        <center>  <h2>为什么选择Kason Khoo作为你的房地产顾问？</h2></center>
+  <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-12 gap-12 items-center">
 
-                            <p><h5><b>步骤1:我会先了解你买房地产的理由 (投资/自住)</b></h5>
-                            目的:让你清晰知道哪一类型的房地产适合你
-                            <br>
-                            <br><h5><b>步骤2:筛选房地产后，会让你清晰了解该房地产的地点和周围发展和升值潜能</b></h5>
-                            目的:让你可以做好Financial Planning和回酬率 (就算自住，你也可以同时赚钱!)
-                            <br>
-                            <br><h5><b>步骤3：为你打造最“漂亮”的Profile来申请贷款</b></h5>
-                            目的:让你得到最低的银行利息，把收益最大化！
-                            <br>
-                            <br><h5><b>步骤4：拿钥匙后，为你打理一切包括装修和出租</b></h5>
-                            目的：让你省下至少30%的装修费，而且可以在最短时间以一个很好地租金出租出去！
-                            <br>
-                            <br><h5><b>步骤5:教你如何"节省"利息，和利用房地产的优势，Cash Out大笔资金(Refinance)</b></h5>
-                            目的：让你的投资组合多元化，利用房地产的优势来制造财富！
-                            <br>
-                            <br><h5><b>步骤6:在最短时间里以最好的价格卖出你的房地产</b></h5>
-                            目的：在最短时间做好你的现金流！
-                            </p>
+    <div class="md:col-span-7">
+      <span class="inline-flex items-center gap-2 text-xs bg-white border border-line rounded-full px-3 py-1 mb-4">
+        <span class="dot"></span>
+        专注：选房｜装修｜出租｜管理
+      </span>
 
-                        <!--    <h5>DESIGN TOOLS</h5>
-                            <p>My favorite design tools are Photoshop and Illustrator but I can create designs in Figma, Sketch and Adobe XD too</p>
-                            <h5>DEVELOPMENT SKILLS</h5>
-                            <p>I am familiar and work on a daily basis with HTML, CSS, JavaScript, Bootstrap and other modern frameworks</p>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+        我不卖项目。<br />
+        我负责让你的房子：<br />
+        <span class="text-navy">买得对、租得出、管得稳</span>
+      </h1>
 
-                            <div class="icons-container">
-                                <img src="images/details-icon-photoshop.png" alt="alternative">
-                                <img src="images/details-icon-illustrator.png" alt="alternative">
-                                <img src="images/details-icon-html.png" alt="alternative">
-                                <img src="images/details-icon-css.png" alt="alternative">
-                                <img src="images/details-icon-bootstrap.png" alt="alternative">
-                                <img src="images/details-icon-javascript.png" alt="alternative"> -->
-                            </div> <!-- end of icons-container -->
-                        </div> <!-- end of text-container -->
-                        <!-- end of text container -->
+      <p class="mt-5 text-sub text-lg">
+        我会先否决“不该买的”，再把装修、出租、管理接起来，
+        让房地产从靠运气，变成可复制的流程。
+      </p>
 
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-		</div> <!-- end of area-2 -->
-    </div> <!-- end of split -->
-    <!-- end of details -->
+      <div class="mt-7 flex flex-wrap gap-3 items-center">
+        <a id="waHero" class="pill pill-primary focus-ring">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+            <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+          </svg>
+          跟我聊 15 分钟
+        </a>
 
+        <a href="#system" class="pill focus-ring">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#0B2A5B" d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/>
+          </svg>
+          看我的流程
+        </a>
+      </div>
 
-    <!-- Projects -->
-  <!--  <div id="projects" class="basic-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Delivered projects</h2>
-                    <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web development for online shops</p>
-                </div> <!-- end of col -->
-  <!--          </div> <!-- end of row -->
-  <!--          <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/project-1.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-<!--                        <p><strong>For:</strong> Jumbotron, <strong>Project:</strong> web design for their corporate websites and landing pages for marketing campaigns <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container --><!--
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/project-2.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-<!--                        <p><strong>For:</strong> Carsrepo, <strong>Project:</strong> designed and developed modern platform for purchasing second hand cars online <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-<!--                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/project-3.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-  <!--                      <p><strong>For:</strong> Truevideo, <strong>Project:</strong> created a custom video editing and upload web app for this awesome team <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-  <!--                  <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/project-4.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-<!--                        <p><strong>For:</strong> Evolosim, <strong>Project:</strong> complete redesign of their corporate website and platform update for their online shop <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
-    <!-- end of projects -->
+      <div class="mt-10 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-3xl border border-line bg-white p-6 shadow-card">
+          <div class="text-sm font-semibold text-navy">我会先否决</div>
+          <div class="mt-2 text-sm text-sub">不适合的，我会直接说“不建议”。你少走弯路，比任何话术都重要。</div>
+        </div>
+        <div class="rounded-3xl border border-line bg-white p-6 shadow-card">
+          <div class="text-sm font-semibold text-navy">我负责落地</div>
+          <div class="mt-2 text-sm text-sub">选房 → 装修 → 出租 → 管理，一条线交付，避免你被不同团队来回拉扯。</div>
+        </div>
+      </div>
 
+      <div class="mt-6 flex flex-wrap gap-2">
+        <a id="ttHero" class="pill focus-ring" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#111827" d="M21 8.2c-1.8 0-3.5-.6-4.9-1.6v7.6a6.4 6.4 0 11-6.4-6.4h.6v3.2h-.6a3.2 3.2 0 103.2 3.2V2h3.1c.4 2.2 2.3 3.8 5 4v2.2z"/>
+          </svg>
+          TikTok
+        </a>
 
-    <!-- Works -->
-    <br>
-  <!--  <div class="basic-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-1.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-  <!--                      <p><strong>For:</strong> Zigoland, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-<!--                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-2.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-<!--                        <p><strong>For:</strong> Visodream, <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-  <!--              <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-3.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-  <!--                      <p><strong>For:</strong> Primoday, <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-  <!--          <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-4.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-  <!--                      <p><strong>For:</strong> Nextlite, <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-  <!--              <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-5.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-  <!--                      <p><strong>For:</strong> Syncnow, <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-  <!--              <div class="col-lg-4">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="Project.html">
-                                <img class="img-fluid" src="images/work-6.jpg" alt="alternative">
-                            </a>
-                        </div> <!-- end of image-container -->
-<!--                        <p><strong>For:</strong> Shifter, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="Project.html">details</a></p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-4 -->
-    <!-- end of works -->
+        <a id="xhsHero" class="pill focus-ring" title="小红书">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="4" fill="#FF2442"/>
+            <path d="M7.2 12.2h9.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8.3 9.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+            <path d="M8.3 15.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+          </svg>
+          小红书
+        </a>
 
+        <a id="igHero" class="pill focus-ring" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#E4405F" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.3-.6a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+          </svg>
+          Instagram
+        </a>
 
-    <!-- Testimonials -->
-    <div class="cards-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">顾客对我的评价(Reviews)</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+        <a id="fbHero" class="pill focus-ring" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#1877F2" d="M12 2a10 10 0 00-1.7 19.9v-7H7.8V12h2.5V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.3h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0012 2z"/>
+          </svg>
+          Facebook
+        </a>
+      </div>
+    </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“值得推荐的一位地产顾问，因为他专业的房产知识，财务知识都很耐心和详细的讲解，一点都不草率，而且也一一回答我的问题，直到明白为止。感恩。”</p>
-                            <div class="details">
-                                <img src="images/testimonial-1.jpg" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Sally Chang</div>
-                                   <div class="occupation">Nest 2 Investor</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
-                    </div>
-                    <!-- end of card -->
+    <div class="md:col-span-5">
+      <div class="bg-white border border-line rounded-[28px] p-5 shadow-soft">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="font-semibold">Kason Khoo</div>
+            <div class="text-xs text-sub mt-1">房地产投资顾问</div>
+          </div>
+          <span class="inline-flex items-center gap-2 text-xs bg-sky border border-line rounded-full px-3 py-1 font-semibold text-navy">
+            
+          </span>
+        </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“Always able to provide professional service, detailed explanation and able to think for his customer. Highly recommended.” </p><br>
-                            <div class="details">
-                                <img src="images/testimonial-2.jpg" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Jason Tan</div>
-                                    <div class="occupation">Nest 2 Investor (Working Oversea)</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
-                    </div>
-                    <!-- end of card -->
+        <div class="mt-4 w-full overflow-hidden rounded-3xl border border-line bg-sky" style="aspect-ratio:4/5;">
+          <img id="profilePhoto" alt="Kason Khoo" class="w-full h-full object-cover photo-crisp" style="object-position:50% 25%;" />
+        </div>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text"><br><br>“解说分明，办事效率高，有责任感”</p><br>
-                            <div class="details">
-                                <img src="images/testimonial-3.jpg" alt="alternative">
-                                <div class="text">
-                                    <div class="testimonial-author">Loo Lam Sun</div>
-                                    <div class="occupation">Kuchai Sentral Investor</div>
-                                </div> <!-- end of text -->
-                            </div> <!-- end of testimonial-details -->
-                        </div>
-                    </div>
-                    <!-- end of card -->
+        <div class="mt-4 bg-sky border border-line rounded-2xl p-4 text-sm">
+          <div class="font-semibold">我负责的是结果</div>
+          <div class="text-sub mt-1">买得对、租得出、管得稳 —— 缺一件都不算赢。</div>
+          <div class="text-sub mt-2">附：Certified Financial Planner（CFP）背景，用于现金流与风险判断。</div>
+        </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of testimonials -->
+        <a id="waCard" class="pill pill-primary focus-ring mt-4 w-full justify-center">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+            <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+          </svg>
+          WhatsApp Kason
+        </a>
+        <p class="text-center text-xs text-sub mt-2">不需要填表，直接聊。</p>
+      </div>
+    </div>
 
+  </div>
+</section>
 
-    <!-- Section Divider -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <hr class="section-divider">
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-    <!-- end of section divider -->
+<!-- ================= FIT / NOT FIT ================= -->
+<section id="fit" class="border-t border-line bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <h2 class="text-2xl md:text-3xl font-semibold">适合谁 / 不适合谁</h2>
+      <p class="mt-3 text-sub">
+        我不会对所有人都“说可以”。你越清楚自己要什么，这个合作越快越稳。
+      </p>
+    </div>
 
+    <div class="md:col-span-7 grid gap-4 sm:grid-cols-2">
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky border border-line">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="#0B2A5B" d="M9 16.2 4.8 12l1.4-1.4L9 13.4l8.8-8.8L19.2 6 9 16.2z"/>
+            </svg>
+          </span>
+          <div class="font-semibold text-navy">适合你，如果你…</div>
+        </div>
+        <ul class="mt-4 space-y-2 text-sm text-sub">
+          <li>• 想要“稳出租”，而不是赌涨价</li>
+          <li>• 接受我先帮你排雷（不适合就不买）</li>
+          <li>• 你重视执行与流程，不喜欢扯皮</li>
+          <li>• 你要的是省心：装修、出租、管理一条线</li>
+        </ul>
+      </div>
 
-    <!-- Questions -->
-    <div class="accordion-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">投资者常见问题</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white border border-line">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="#B42318" d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3 1.4 1.4z"/>
+            </svg>
+          </span>
+          <div class="font-semibold text-navy">不适合你，如果你…</div>
+        </div>
+        <ul class="mt-4 space-y-2 text-sm text-sub">
+          <li>• 只想听好听的话，不想听“不建议”</li>
+          <li>• 只关心短期“爆涨”，不在意出租逻辑</li>
+          <li>• 不愿意提供基本信息（预算/区域/目标）</li>
+          <li>• 你想要“随便弄弄”，但又要完美结果</li>
+        </ul>
+      </div>
 
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    想投资房地产，可是不知道可不可以借到银行贷款？
-                                </button>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    我们会依据你的薪水和Profile精准地推算出你可以借到多少房屋贷款，如果目前的Profile借不到的话，我们会给你方案如何重组Profile，让你能成功投资你心爱的房地产！
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    投资房地产后想租出去，可是不懂哪里找租客和打理
-                                </button>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    我们的团队会为你筛选优质租客，而且会全程为你打理和处理文件，就算你在外地也可以放心，让你的房地产在最短的时间里找到租客！
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    没买过房地产，第一间房地产应该投资还是自住？
-                                </button>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    这个情况没有一个标准答案，我们会用房地产筛选法来了解你当下的投资组合以及你的个人需求来断定你的买房地产的目的
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    银行贷款可以跟家人以外的人联名吗？
-                                </button>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    这个要看各个银行的Policy，有些银行可以接受，一些不能，我们会从中协助你
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFive">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    投资房地产必须要给头期(Down Payment)吗？
-                                </button>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    市场上是有Projects是免头期的，因为不一样的Projects有它们的各自的Package，询问我们，我们会协助你！
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end of accordion -->
+      <a id="waFit" class="pill pill-primary focus-ring sm:col-span-2 w-full justify-center">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+          <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+        如果你是“适合的那种人”，直接 WhatsApp 我
+      </a>
+    </div>
+  </div>
+</section>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of accordion-1 -->
-    <!-- end of questions -->
+<!-- ================= SYSTEM ================= -->
+<section id="system" class="border-t border-line bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <h2 class="text-2xl md:text-3xl font-semibold">我的流程（选房｜装修｜出租｜管理）</h2>
+      <p class="mt-3 text-sub">你只需要给我：预算、区域、目标。我会用同一套流程帮你判断，然后把执行接起来。</p>
+    </div>
 
+    <div class="md:col-span-7 grid gap-4">
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="font-semibold text-navy">1）选房：先排雷</div>
+        <div class="mt-2 text-sm text-sub">不该买的我会直接否决，重点看：租客画像、供需结构、退出逻辑。</div>
+      </div>
 
-    <!-- Contact -->
-    <div id="contact" class="form-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>联系 Kason Khoo</h2>
-                    <p class="p-heading">如果你有任何关于房地产的问题，别犹豫！留下你的联系方式和问题，我们会在24小时以内联系你，帮你统统解决！紧急的话可以马上联系我 <b>(012-3828967)</b> 或者在email里联系我 <a class="blue no-line" href="#your-link">admin.kasonkhoo.com</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="font-semibold text-navy">2）装修：为“出租效率”服务</div>
+        <div class="mt-2 text-sm text-sub">预算按回收期分配，选材耐用好打理，交付标准化减少返工与拖延。</div>
+      </div>
 
-                    <!-- Contact Form -->
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">姓名</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">问题</label>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">提交</button>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="font-semibold text-navy">3）出租：定价 + 包装 + 筛选</div>
+        <div class="mt-2 text-sm text-sub">目标是更快出租、更稳租金；不是拼运气，而是拼策略与执行。</div>
+      </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of contact -->
+      <div class="rounded-3xl border border-line bg-white p-7 shadow-card">
+        <div class="font-semibold text-navy">4）管理：让你省心</div>
+        <div class="mt-2 text-sm text-sub">收租、维修、沟通、续租、退房都有流程，你不用天天被拉着跑。</div>
+      </div>
 
+      <a id="waSystem" class="pill pill-primary focus-ring w-full justify-center">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+          <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+        WhatsApp 我：发预算 / 区域 / 目标
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <div class="footer bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="social-container">
-                        <span class="fa-stack">
-                            <a href="https://www.facebook.com/KasonKhooPropertyConsultant">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://kasonkhoocom.wasap.my">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-whatsapp fa-stack-1x"></i>
-                            </a>
-                        </span>
-<!--                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
--->                    </div> <!-- end of social-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
+<!-- ================= COLLAB ================= -->
+<section id="collab" class="border-t border-line bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <h2 class="text-2xl md:text-3xl font-semibold">合作对接</h2>
+      <p class="mt-3 text-sub">
+        如果你是 developer、装修/家电/软装/摄影、management office、agent leader，
+        想做长期合作，直接 WhatsApp 我对接就行。
+      </p>
+    </div>
 
+    <div class="md:col-span-7">
+      <div class="rounded-3xl border border-line bg-sky p-7">
+        <div class="font-semibold text-navy">最有效的对接方式</div>
+        <p class="mt-2 text-sm text-sub">发我：你是谁 + 你做什么 + 你最强的 1-2 个案例链接。</p>
+        <a id="waCollab" class="pill pill-primary focus-ring mt-4 w-full justify-center">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+            <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+          </svg>
+          我是合作方，我要对接
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Copyright -->
-<!--    <div class="copyright bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">Your name</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="border-t border-line bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-12 gap-10 items-center">
+    <div class="md:col-span-7">
+      <h2 class="text-3xl md:text-4xl font-semibold">直接发我 3 行就够</h2>
+      <p class="mt-3 text-sub text-lg">
+        预算 / 想买哪里 / 目标（出租 or 管理省心）。<br/>
+        我会直接告诉你：逻辑通不通、风险在哪、下一步怎么走。
+      </p>
 
-    <!--    <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Distributed By <a class="no-line" href="https://themewagon.com/">Themewagon</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
+      <a id="waBottom" class="pill pill-primary focus-ring mt-6 w-full sm:w-auto justify-center">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#25D366" d="M16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.3.6 4.6 1.8 6.6L2 30l7.6-2.5c2 1.1 4.3 1.7 6.4 1.7 7.2 0 13.1-5.9 13.1-13.1C29.1 8.8 23.2 2.9 16 2.9z"/>
+          <path fill="#fff" d="M22.5 18.8c-.3-.2-1.8-.9-2-.9-.3 0-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7 0-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .2.2 2 3.1 4.9 4.4 2.9 1.3 2.9.9 3.4.8.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+        WhatsApp Kason（15分钟）
+      </a>
+    </div>
 
-    </div> <!-- end of copyright -->
-    <!-- end of copyright -->
+    <div class="md:col-span-5">
+      <div class="rounded-3xl border border-line bg-white p-6 shadow-card">
+        <div class="text-sm font-semibold text-navy">你可以这样发我</div>
+        <div class="mt-4 rounded-2xl bg-sky p-4 border border-line text-sm text-sub">
+          1）预算：RM____<br />
+          2）区域：____<br />
+          3）目标：出租 / 管理省心 / 其他____
+        </div>
 
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a id="ttFooter" class="pill focus-ring">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#111827" d="M21 8.2c-1.8 0-3.5-.6-4.9-1.6v7.6a6.4 6.4 0 11-6.4-6.4h.6v3.2h-.6a3.2 3.2 0 103.2 3.2V2h3.1c.4 2.2 2.3 3.8 5 4v2.2z"/>
+            </svg>
+            TikTok
+          </a>
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+          <a id="xhsFooter" class="pill focus-ring">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="4" fill="#FF2442"/>
+              <path d="M7.2 12.2h9.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M8.3 9.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+              <path d="M8.3 15.2h7.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+            </svg>
+            小红书
+          </a>
+
+          <a id="igFooter" class="pill focus-ring">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#E4405F" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.3-.6a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+            </svg>
+            Instagram
+          </a>
+
+          <a id="fbFooter" class="pill focus-ring">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#1877F2" d="M12 2a10 10 0 00-1.7 19.9v-7H7.8V12h2.5V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.3h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0012 2z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-6 text-center text-xs text-sub">
+  © <span id="year"></span> Kason Khoo · 
+</footer>
+
+<script>
+  // assign links
+  document.getElementById("ttTop").href = LINKS.tiktok;
+  document.getElementById("xhsTop").href = LINKS.xhs;
+  document.getElementById("igTop").href = LINKS.instagram;
+  document.getElementById("fbTop").href = LINKS.facebook;
+
+  document.getElementById("waTop").href = LINKS.whatsapp();
+  document.getElementById("waTopM").href = LINKS.whatsapp();
+  document.getElementById("waHero").href = LINKS.whatsapp();
+  document.getElementById("waCard").href = LINKS.whatsapp();
+  document.getElementById("waFit").href = LINKS.whatsapp();
+  document.getElementById("waSystem").href = LINKS.whatsapp();
+  document.getElementById("waBottom").href = LINKS.whatsapp();
+
+  document.getElementById("ttHero").href = LINKS.tiktok;
+  document.getElementById("xhsHero").href = LINKS.xhs;
+  document.getElementById("igHero").href = LINKS.instagram;
+  document.getElementById("fbHero").href = LINKS.facebook;
+
+  document.getElementById("ttFooter").href = LINKS.tiktok;
+  document.getElementById("xhsFooter").href = LINKS.xhs;
+  document.getElementById("igFooter").href = LINKS.instagram;
+  document.getElementById("fbFooter").href = LINKS.facebook;
+
+  // collab link
+  const collabMsg = encodeURIComponent(
+    "Hi Kason，我想跟你合作。\n我是谁：____\n我提供：____\n案例链接：____"
+  );
+  document.getElementById("waCollab").href = `https://wa.me/${WA_NUMBER}?text=${collabMsg}`;
+
+  // year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // photo fallback loader
+  const img = document.getElementById("profilePhoto");
+  let i = 0;
+  function tryLoad(){
+    if(i >= PHOTO_CANDIDATES.length){
+      img.style.display = "none";
+      const box = img.parentElement;
+      box.style.position = "relative";
+      const tip = document.createElement("div");
+      tip.className = "absolute inset-0 flex items-center justify-center text-sm text-sub";
+      tip.textContent = "找不到照片路径（请确认 public/kason.jpg 已部署）";
+      box.appendChild(tip);
+      return;
+    }
+    img.src = PHOTO_CANDIDATES[i++];
+  }
+  img.onerror = tryLoad;
+  tryLoad();
+</script>
+
 </body>
 </html>
